@@ -74,7 +74,7 @@ var url_fetch_sign = {
     "Content-Type": "application/octet-stream",
     Referer: "https://tieba.baidu.com/index/tbwise/forum",
     Cookie: cookieVal,
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/16A366"
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
   }
 };
 var url_fetch_add = {
