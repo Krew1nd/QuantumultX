@@ -1,12 +1,6 @@
-/**
-* @author: KleinerSource
-* 
-* @fileoverview Example to compose response for rewrite of script-echo-response.
-*
-* $request.url, $notify(title, subtitle, message), console.log(message), $done(response)
-*
-* @supported Quantumult X (v1.0.3-build141)
-*/
+# > Emby Client 破解
+# Author: KleinerSource
+
 var url = $request.url;
 
 const myStatus = "HTTP/1.1 200 OK";
