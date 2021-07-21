@@ -1,1 +1,1 @@
-# Quantumult X 4 Krewind
+Quantumult X 4 Krewind
