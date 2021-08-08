@@ -2,6 +2,15 @@ if ($response.statusCode != 200) {
   $done(Null);
 }
 
+function ISP_ValidCheck(para) {
+  if(para=="Data Communication Business Group"){
+  return "Chunghwa Telecom"
+  } else
+  {
+  return para
+  }
+}
+
 var body = $response.body;
 var obj = JSON.parse(body);
 var title = obj['country'];
