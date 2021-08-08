@@ -2,12 +2,12 @@ if ($response.statusCode != 200) {
   $done(Null);
 }
 
-function ISP_ValidCheck(obj['isp']) {
-  if(obj['isp'] =="Data Communication Business Group"){
+function ISP_ValidCheck(para) {
+  if(para =="Data Communication Business Group"){
   return "Chunghwa Telecom"
   } else
   {
-  return obj['isp']
+  return para
   }
 }
 
