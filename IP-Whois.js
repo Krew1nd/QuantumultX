@@ -3,8 +3,8 @@ if ($response.statusCode != 200) {
 }
 
 function ISP(para) {
-  if(para ==","){
-  return " "
+  if(para =="Data Communication Business Group"){
+  return "Chunghwa Telecom Co., Ltd."
   } else
   {
   return para
