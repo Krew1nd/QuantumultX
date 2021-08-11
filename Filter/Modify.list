@@ -1,11 +1,4 @@
-# Unbreak
-# > General
-USER-AGENT,archero*
-USER-AGENT,coffeecorp*
-USER-AGENT,Coffee%20Corp*
-USER-AGENT,restaurant-mobile*
-DOMAIN,app.adjust.com
-DOMAIN,bdtj.tagtic.cn
+# Modify
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
@@ -17,7 +10,7 @@ DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,update.googleapis.com
 DOMAIN,translate.googleapis.com
-# >> Google Fonts API
+DOMAIN,translate.google.com
 DOMAIN,fonts.googleapis.com
 DOMAIN,fonts.gstatic.com
 # >> Firebase Cloud Messaging
@@ -41,3 +34,10 @@ DOMAIN,analytics.strava.com
 # > Umeng
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
+# > Other
+USER-AGENT,archero*
+USER-AGENT,coffeecorp*
+USER-AGENT,Coffee%20Corp*
+USER-AGENT,restaurant-mobile*
+DOMAIN,app.adjust.com
+DOMAIN,bdtj.tagtic.cn
