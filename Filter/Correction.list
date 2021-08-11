@@ -1,4 +1,4 @@
-# Modify
+# Correction
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
@@ -34,9 +34,5 @@ DOMAIN,analytics.strava.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 # > Other
-USER-AGENT,archero*
-USER-AGENT,coffeecorp*
-USER-AGENT,Coffee%20Corp*
-USER-AGENT,restaurant-mobile*
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
