@@ -7,7 +7,6 @@
 获取数据打开APP即可获取
 邀请多了容易封号
 ========青龙===========
-ql raw http://nm66.top/jzread.js
 变量为jzreadurl多账号用@隔开
 export jzreadurl='https://api.st615.com/v1/user/info?token=抓包的token'
 自行抓包替换 关键字为token 抓包的token
@@ -20,12 +19,13 @@ export jzreadurl='https://api.st615.com/v1/user/info?token=抓包的token'
 https://api.st615.com/v1/user/info\?token=\S+ url script-request-header http://nm66.top/jzread.js
 
 hostname = api.st615.com
+
+[task_local]
+40 * * * * https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/task/jzread.js, tag=九章头条, img-url=https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Icon/JZTT.png, enabled=true
+
 */
 
-// [task_local]
-// 40 * * * * http://nm66.top/jzread.js, tag=柠檬九章头条, img-url=circles.hexagongrid.fill.system, enabled=true
-
-const $ = new Env('柠檬九章头条');
+const $ = new Env('九章头条');
 let status;
 status = (status = ($.getval("jzreadstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
 let jzreadurlArr = [],jzreadcount = ''
