@@ -16,12 +16,12 @@ export jzreadurl='https://api.st615.com/v1/user/info?token=抓包的token'
 
 ========Quantumult X=========
 [rewrite_local]
-https://api.st615.com/v1/user/info\?token=\S+ url script-request-header https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/task/jzread.js
+https://api.st615.com/v1/user/info\?token=\S+ url script-request-header https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Task/jzread.js
 
 hostname = api.st615.com
 
 [task_local]
-40 * * * * https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/task/jzread.js, tag=九章头条, img-url=https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Icon/jzread.png, enabled=true
+40 * * * * https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Task/jzread.js, tag=九章头条, img-url=https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Icon/jzread.png, enabled=true
 
 */
 
