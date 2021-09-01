@@ -32,9 +32,8 @@ let cookiesArr = [], cookie = '', jdPlantBeanShareArr = [], isBox = false, notif
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 //助力好友分享码(最多3个,否则后面的助力失败)
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
-//下面给出两个账号的填写示例（iOS只支持2个京东账号）
-
-//账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
+//填写示例（iOS只支持2个京东账号）
+//好友shareCode,不同好友的shareCode中间用@符号隔开
 let shareCodes = [''] // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
 let allMessage = ``;
 let currentRoundId = null;//本期活动id
@@ -465,7 +464,7 @@ function showTaskProcess() {
     await plantBeanIndex();
     $.taskList = $.plantBeanIndexResult.data.taskList;
     if ($.taskList && $.taskList.length > 0) {
-      console.log("     任务   进度");
+      console.log("任务进度");
       for (let item of $.taskList) {
         console.log(`[${item["taskName"]}]  ${item["gainedNum"]}/${item["totalNum"]}   ${item["isFinished"]}`);
       }
