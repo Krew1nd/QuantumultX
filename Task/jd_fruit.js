@@ -24,8 +24,6 @@ const $ = new Env('东东农场');
 console.log('\nHello World\n')
 
 let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, newShareCodes, allMessage = '';
-//助力好友分享码(最多3个,否则后面的助力失败)，原因:京东农场每人每天只有3次助力机会
-//此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
 let shareCodes = [''];
 let message = '', subTitle = '', option = {}, isFruitFinished = false;
 const retainWater = 100;//保留水滴大于多少g,默认100g;
