@@ -18,8 +18,8 @@ cron "1 7-21/2 * * *" script-path=jd_plantBean.js,tag=京东种豆得豆
 
 ====================================小火箭=============================
 京东种豆得豆 = type=cron,script-path=jd_plantBean.js, cronexpr="1 7-21/2 * * *", timeout=3600, enable=true
-
 */
+
 const $ = new Env('京东种豆得豆');
 
 console.log('\nHello World\n')
