@@ -17,8 +17,8 @@ cron "5 6-18/6 * * *" script-path=jd_fruit.js,tag=东东农场
 
 =========================小火箭===========================
 东东农场 = type=cron,script-path=jd_fruit.js, cronexpr="5 6-18/6 * * *", timeout=3600, enable=true
-
 */
+
 const $ = new Env('东东农场');
 
 console.log('\nHello World\n')
