@@ -83,16 +83,16 @@ const message = {
   console.log(`testDisneyPlus: region=${region}, status=${status}`)
   if (status==STATUS_COMING) {
     //console.log(1)
-    result["Disney"] = "<b>Disneyᐩ:</b> 即将登陆 ➤ "+flags.get(region.toUpperCase())+" ⚠️"
+    result["Disney"] = "<b>Disneyᐩ:</b> 即将登陆 ➤ "+flags.get(region.toUpperCase())
   } else if (status==STATUS_AVAILABLE){
     //console.log(2)
-    result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➤ "+flags.get(region.toUpperCase())+" 🎉"
+    result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➤ "+flags.get(region.toUpperCase())
     console.log(result["Disney"])
   } else if (status==STATUS_NOT_AVAILABLE) {
     //console.log(3)
-    result["Disney"] = "<b>Disneyᐩ:</b> 未支持 🚫 "
+    result["Disney"] = "<b>Disneyᐩ:</b> 未支持"
   } else if (status==STATUS_TIMEOUT) {
-    result["Disney"] = "<b>Disneyᐩ:</b> 检测超时 🕒 "
+    result["Disney"] = "<b>Disneyᐩ:</b> 检测超时"
   }
 
   let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],result["Paramount"],result["Discovery"]]).join("</br></br>")
@@ -303,14 +303,14 @@ function testNf(filmId) {
       console.log("nf:"+response.statusCode)
       if (response.statusCode === 404) {
         
-        result["Netflix"] = "<b>Netflix: </b>支持自制剧集 ⚠️"
+        result["Netflix"] = "<b>Netflix: </b>仅支持自制剧"
         console.log("nf:"+result["Netflix"])
         resolve('Not Found')
         return 
       } else if (response.statusCode === 403) {
         
         //console.log("nfnf")
-        result["Netflix"] = "<b>Netflix: </b>未支持 🚫"
+        result["Netflix"] = "<b>Netflix: </b>未支持"
         console.log("nf:"+result["Netflix"])
         //$notify("nf:"+result["Netflix"])
         resolve('Not Available')
@@ -323,13 +323,13 @@ function testNf(filmId) {
           region = 'us'
         }
         console.log("nf:"+region)
-        result["Netflix"] = "<b>Netflix: </b>完整支持"+arrow+ flags.get(region.toUpperCase())+" 🎉"
+        result["Netflix"] = "<b>Netflix: </b>支持非自制剧"+arrow+ flags.get(region.toUpperCase())
         //$notify("nf:"+result["Netflix"])
         resolve("nf:"+result["Netflix"])
         return 
       }
     }, reason => {
-      result["Netflix"] = "<b>Netflix: </b>检测超时 🕒"
+      result["Netflix"] = "<b>Netflix: </b>检测超时"
       console.log(result["Netflix"])
       resolve("timeout")
     }
@@ -353,10 +353,10 @@ function testYTB() {
       console.log("ytb:"+response.statusCode)
       if (response.statusCode !== 200) {
         //reject('Error')
-        result["YouTube"] = "<b>YouTube Premium: </b>检测失败 ❗️"
+        result["YouTube"] = "<b>YouTube Premium: </b>检测失败"
       } else if (data.indexOf('Premium is not available in your country') !== -1) {
           //resolve('Not Available')
-        result["YouTube"] = "<b>YouTube Premium: </b>未支持 🚫"
+        result["YouTube"] = "<b>YouTube Premium: </b>未支持"
       } else if (data.indexOf('Premium is not available in your country') == -1) {//console.log(data.split("countryCode")[1])
       let region = ''
       let re = new RegExp('"GL":"(.*?)"', 'gm')
@@ -369,11 +369,11 @@ function testYTB() {
         region = 'US'
       }
       //resolve(region)
-      result["YouTube"] = "<b>YouTube Premium: </b>支持 "+arrow+ flags.get(region.toUpperCase())+" 🎉"
+      result["YouTube"] = "<b>YouTube Premium: </b>支持 "+arrow+ flags.get(region.toUpperCase())
       console.log("ytb:"+region+ result["YouTube"])
       }
     }, reason => {
-      result["YouTube"] = "<b>YouTube Premium: </b>检测超时 🕒"
+      result["YouTube"] = "<b>YouTube Premium: </b>检测超时"
       //resolve("timeout")
     })
 }
@@ -410,7 +410,7 @@ function testDazn() {
     //$done(data)
     if (response.statusCode !== 200) {
       //reject('Error')
-      result["Dazn"] = "<b>Dazn: </b>检测失败 ❗️"
+      result["Dazn"] = "<b>Dazn: </b>检测失败"
     } else if (response.statusCode == 200) {//console.log(data.split("countryCode")[1])
       //console.log(data)
       let region = ''
@@ -418,16 +418,16 @@ function testDazn() {
       let ret = re.exec(data)
       if (ret != null && ret.length === 2) {
         region = ret[1]
-        result["Dazn"] = "<b>Dazn: </b>支持 "+arrow+ flags.get(region.toUpperCase())+" 🎉"
+        result["Dazn"] = "<b>Dazn: </b>支持 "+arrow+ flags.get(region.toUpperCase())
       } else {
-        result["Dazn"] = "<b>Dazn: </b>未支持 🚫"
+        result["Dazn"] = "<b>Dazn: </b>未支持"
 
       }
       //resolve(region)
             console.log("Dazn:"+region+ result["Dazn"])
     }
   }, reason => {
-    result["Dazn"] = "<b>Dazn: </b>检测超时 🕒"
+    result["Dazn"] = "<b>Dazn: </b>检测超时"
     //resolve("timeout")
   })
 }
@@ -447,14 +447,14 @@ function testParam() {
     console.log("Paramountᐩ:"+response.statusCode)
     if (response.statusCode == 200) {
       //reject('Error')
-      result["Paramount"] = "<b>Paramountᐩ: </b>支持 🎉 "
+      result["Paramount"] = "<b>Paramountᐩ: </b>支持"
     } else if (response.statusCode == 302) {
       //resolve('Not Available')
-      result["Paramount"] = "<b>Paramountᐩ: </b>未支持 🚫"
+      result["Paramount"] = "<b>Paramountᐩ: </b>未支持"
     } 
       console.log("Paramountᐩ:"+ result["Paramount"])
   }, reason => {
-    result["Paramount"] = "<b>Paramountᐩ: </b>检测超时 🕒"
+    result["Paramount"] = "<b>Paramountᐩ: </b>检测超时"
     //resolve("timeout")
   })
 }
@@ -497,12 +497,12 @@ function testDiscovery() {
         let data = JSON.parse(response.body)
         let locationd = data["data"]["attributes"]["currentLocationTerritory"]
         if (locationd == "us") {
-          result["Discovery"] = "<b>Discoveryᐩ: </b>支持 🎉 "
+          result["Discovery"] = "<b>Discoveryᐩ: </b>支持"
           console.log("支持Discoveryᐩ")
           resolve("支持Discoveryᐩ")
           return
         } else {
-          result["Discovery"] = "<b>Discoveryᐩ: </b>未支持 🚫"
+          result["Discovery"] = "<b>Discoveryᐩ: </b>未支持"
           console.log("不支持Discoveryᐩ")
           resolve("不支持Discoveryᐩ")
           return
