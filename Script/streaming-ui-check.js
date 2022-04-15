@@ -131,7 +131,7 @@ $configuration.sendMessage(message).then(resolve => {
     if (resolve.ret) {
       let output=JSON.stringify(resolve.ret[message.content])? JSON.stringify(resolve.ret[message.content]).replace(/\"|\[|\]/g,"").replace(/\,/g," ➤ ") : $environment.params
       let content = "--------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
-      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➤ " + output+ "</font>"
+      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+ output+ "</font>"
       content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
       //$notify(typeof(output),output)
       console.log(output);
