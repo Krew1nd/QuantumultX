@@ -95,8 +95,8 @@ const message = {
     result["Disney"] = "<b>Disneyᐩ:</b> 检测超时"
   }
 
-  let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],result["Paramount"],result["Discovery"]]).join("</br></br>")
-  content = content + "</br>------------------------------</br>"+"<font color=#CD5C5C >"+ $environment.params+ "</font>"
+  let content = "-----------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],result["Paramount"],result["Discovery"]]).join("</br></br>")
+  content = content + "</br>-----------------------------</br>"+"<font color=#CD5C5C >"+ $environment.params+ "</font>"
   content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
 //  cnt = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` +'----------------------</br></br>'+result["Disney"]+'</br></br>----------------------</br>'+$environment.params + `</p>`
 $configuration.sendMessage(message).then(resolve => {
@@ -106,8 +106,8 @@ $configuration.sendMessage(message).then(resolve => {
     }
     if (resolve.ret) {
       let output=JSON.stringify(resolve.ret[message.content])? JSON.stringify(resolve.ret[message.content]).replace(/\"|\[|\]/g,"").replace(/\,/g," ➤ ") : $environment.params
-      let content = "--------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
-      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+ output+ "</font>"
+      let content = "-------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
+      content = content + "</br>-------------------------------------</br>"+"<font color=#CD5C5C>"+ output+ "</font>"
       content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
       //$notify(typeof(output),output)
       console.log(output);
@@ -130,8 +130,8 @@ $configuration.sendMessage(message).then(resolve => {
     }
     if (resolve.ret) {
       let output=JSON.stringify(resolve.ret[message.content])? JSON.stringify(resolve.ret[message.content]).replace(/\"|\[|\]/g,"").replace(/\,/g," ➤ ") : $environment.params
-      let content = "--------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
-      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+ output+ "</font>"
+      let content = "-------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
+      content = content + "</br>-------------------------------------</br>"+"<font color=#CD5C5C>"+ output+ "</font>"
       content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
       //$notify(typeof(output),output)
       console.log(output);
