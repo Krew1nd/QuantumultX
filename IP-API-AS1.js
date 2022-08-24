@@ -7,16 +7,16 @@ var flags = new Map([["AC","🇦🇨"],["AD","🇦🇩"],["AE","🇦🇪"],["AF"
 var body = $response.body;
 var obj = JSON.parse(body);
 
-var as = obj['as'];
+var str = obj['as'];
 
-function deleteAS(as){
+function deleteAS(str){
       let reg = /\A\S\d+/g;
-      let = as.replace(reg,"");
-      return as1;
+      let = str.replace(reg,"");
+      return str1;
 }
 
 var title = flags.get(obj['countryCode']) + ' '+ obj['country'];
-var subtitle = obj['as1'];
+let subtitle = str1;
 var ip = obj['query'];
 var description = "国家/地区" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "ISP" + ":" + obj['isp'] + '\n' + "AS" + ":" + obj['as'] + '\n' + "IP" + ":" + obj['query'];
 
