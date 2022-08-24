@@ -9,7 +9,7 @@ var obj = JSON.parse(body);
 
 var title = flags.get(obj['countryCode']) + ' '+ obj['country'];
 var str = obj['as'];
-var subtitle = +str.replace(/\A\S\d+/g,"");
+var subtitle = +str.replace(/[^0-9.]/g,"");
 var ip = obj['query'];
 var description = "国家/地区" + ":" + obj['country'] + '\n' + "城市" + ":" + obj['city'] + '\n' + "ISP" + ":" + obj['isp'] + '\n' + "AS" + ":" + obj['as'] + '\n' + "IP" + ":" + obj['query'];
 
