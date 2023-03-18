@@ -1,5 +1,5 @@
 if ($response.statusCode != 200) {
-  $done(Null);
+  $done(null);
 }
 
 var body = $response.body;
@@ -19,7 +19,7 @@ function countryCodeToFlag(countryCode) {
 }
 
 var flag = countryCodeToFlag(obj['countryCode'])
-var title = ${flag} + ' ' + obj['country'];
+var title = `${flag} ${obj['country']}`;
 var as = obj['as'];
 var subtitle = as.replace(/AS\d+ /g,"");
 var ip = obj['query'];
