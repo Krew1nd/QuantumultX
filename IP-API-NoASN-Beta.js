@@ -12,7 +12,7 @@ if (!$response.statusCode) {
     IP: ${query}
   `;
   
-  $done({title, subtitle, ip: query, description});
+  $done({title, subtitle, description});
 } else {
   $done(Null);
 }
