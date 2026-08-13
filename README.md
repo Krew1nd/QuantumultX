@@ -22,8 +22,8 @@
 | [IP-API-Flags.js](Script/IP-API-Flags.js) | IP 信息展示（带国旗 emoji，TW 显示为 CN） |
 | [IP-API-ASO-Dev.js](Script/IP-API-ASO-Dev.js) | IP 信息展示开发版 |
 | [IPWhois.js](Script/IPWhois.js) | IP whois 信息展示（国家 / ISP 中文转换） |
-| [jd_fruit.js](Script/jd_fruit.js) | 京东东东农场（兼容 QX / Surge / Loon / Node.js） |
-| [jd_plantBean.js](Script/jd_plantBean.js) | 京东种豆得豆（兼容 QX / Surge / Loon / Node.js） |
+| [JD_fruit.js](Script/JD_fruit.js) | 京东东东农场（兼容 QX / Surge / Loon / Node.js） |
+| [JD_plantBean.js](Script/JD_plantBean.js) | 京东种豆得豆（兼容 QX / Surge / Loon / Node.js） |
 | [jzread.js](Script/jzread.js) | 九章头条签到提现（青龙变量 `jzreadurl` / `cashtx`） |
 
 ## 重写规则
@@ -37,7 +37,7 @@
 
 `Icon/` 内含京东系任务（东东农场、种豆得豆等）、电视家、汇率、九章头条等任务图标，供 `task_local` 的 `img-url` 使用。
 
-命名规范：文件名首字母大写；京东系统一使用 `JD` 前缀（如 `JD_fruit.png`）。
+命名规范：文件名首字母大写；京东系统一使用 `JD` 前缀（如 `JD_fruit.png`、`JD_fruit.js`）。
 
 | 图标 | 说明 |
 | --- | --- |
@@ -50,7 +50,7 @@
 | [JD_sgmh.png](Icon/JD_sgmh.png) | 京东系任务 |
 | [JD_shop.png](Icon/JD_shop.png) | 京东商城 |
 | [JD_syj.png](Icon/JD_syj.png) | 京东系任务 |
-| [Jdzz.png](Icon/Jdzz.png) | 京东系任务 |
+| [JD_zz.png](Icon/JD_zz.png) | 京东系任务 |
 | [Jkd.png](Icon/Jkd.png) | 京东系任务 |
 | [Jzread.png](Icon/Jzread.png) | 九章头条 |
 | [Youth.png](Icon/Youth.png) | 其他任务 |
