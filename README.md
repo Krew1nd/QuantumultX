@@ -10,7 +10,7 @@
 | --- | --- |
 | `Script/` | 常用脚本（.js） |
 | `Rewrite/` | 重写规则（.conf） |
-| `Task/` | 任务图标（.png，位于 `Icon/Task/`） |
+| `Icon/` | 任务图标（.png） |
 
 ## 脚本
 
@@ -35,13 +35,13 @@
 
 ## 图标
 
-`Icon/Task/` 内含京东系任务（东东农场、种豆得豆等）、电视家、汇率、OpenAI、九章头条等任务图标，供 `task_local` 的 `img-url` 使用。
+`Icon/` 内含京东系任务（东东农场、种豆得豆等）、电视家、汇率、OpenAI、九章头条等任务图标，供 `task_local` 的 `img-url` 使用。
 
 ## 使用方式
 
 - **脚本**：参考各文件头部注释中的配置示例（task_local / rewrite 写法）
 - **重写规则**：QX → 配置 → 重写，引用本仓库 raw 链接
-- **图标**：`img-url=https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Icon/Task/xxx.png`
+- **图标**：`img-url=https://raw.githubusercontent.com/Krew1nd/QuantumultX/master/Icon/xxx.png`
 
 ## 声明
 
