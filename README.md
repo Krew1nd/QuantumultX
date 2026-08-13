@@ -35,7 +35,27 @@
 
 ## 图标
 
-`Icon/` 内含京东系任务（东东农场、种豆得豆等）、电视家、汇率、OpenAI、九章头条等任务图标，供 `task_local` 的 `img-url` 使用。
+`Icon/` 内含京东系任务（东东农场、种豆得豆等）、电视家、汇率、九章头条等任务图标，供 `task_local` 的 `img-url` 使用。
+
+命名规范：文件名首字母大写；京东系统一使用 `JD` 前缀（如 `JD_fruit.png`）。
+
+| 图标 | 说明 |
+| --- | --- |
+| [JD.png](Icon/JD.png) | 京东通用 |
+| [JD_fruit.png](Icon/JD_fruit.png) | 东东农场 |
+| [JD_bean_home.png](Icon/JD_bean_home.png) | 种豆得豆 |
+| [JD_car.png](Icon/JD_car.png) | 京东系任务 |
+| [JD_club_lottery.png](Icon/JD_club_lottery.png) | 京东系任务 |
+| [JD_lotteryMachine.png](Icon/JD_lotteryMachine.png) | 京东系任务 |
+| [JD_sgmh.png](Icon/JD_sgmh.png) | 京东系任务 |
+| [JD_shop.png](Icon/JD_shop.png) | 京东商城 |
+| [JD_syj.png](Icon/JD_syj.png) | 京东系任务 |
+| [Jdzz.png](Icon/Jdzz.png) | 京东系任务 |
+| [Jkd.png](Icon/Jkd.png) | 京东系任务 |
+| [Jzread.png](Icon/Jzread.png) | 九章头条 |
+| [Youth.png](Icon/Youth.png) | 其他任务 |
+| [Dianshijia.png](Icon/Dianshijia.png) | 电视家 |
+| [Exchange.png](Icon/Exchange.png) | 汇率 |
 
 ## 使用方式
 
